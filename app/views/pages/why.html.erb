@@ -1,2 +1,44 @@
-<h1>Pages#why</h1>
-<p>Find me in app/views/pages/why.html.erb</p>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/pages/rewards" id="brand">lottery4</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="navlinks"><a href="/pages/howitworks">How it works. </a></li>
+        <li class="navlinks"><a href="/pages/rewards">Rewards.</a></li>
+        <li class="active navlinks"><a href="/pages/why">Why Us.</a></li>
+        </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li class="navlinks"><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li class="navlinks"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="navlinks"><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li class="navlinks"><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <p class="step-head" id="why">Why us?</p>
+    <p class="step-bulk">There are a lot of reasons why you should use our service. For one, it doesn't cost you anything else. Basically, for $0, you could get $50! If it seems like its too good to be true, that's what we thought at first, but it's not. The way it works is using Amazon affiliate programs. How that works, is we promote Amazon products, and in return, we get a cut. We take that cut and give it back to you! We like to share the love. Also, we won't send your email to anyone. That leads to spam, which no one likes. Really. Who does?</p>
+  </div>
+  </body>
+</html>

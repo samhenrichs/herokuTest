@@ -1,2 +1,67 @@
-<h1>Pages#howitworks</h1>
-<p>Find me in app/views/pages/howitworks.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rewards</title>
+    <link rel="stylesheet" href="custom.css.scss">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/pages/rewards" id="brand">lottery4</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active navlinks"><a href="/pages/howitworks">How it works. </a></li>
+        <li class="navlinks"><a href="/pages/rewards">Rewards.</a></li>
+        <li class="navlinks"><a href="/pages/why">Why Us.</a></li>
+        </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li class="navlinks"><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li class="navlinks"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="navlinks"><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li class="navlinks"><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+  <br>
+  <p id="welcome">Welcome to lottery4. We're glad you're here.</p>
+  <br>
+  <p id="sub">Use this to set up your account, and learn how to start getting your rewards. Please note that if you don't have an Amazon account, this isn't going to work. If you still want to work with us, we're flattered, and you cna create an Amazon account <a href="https://www.amazon.com/ap/register?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_custrec_newcust" class="links">here.</a></p>
+  <br>
+  <p class="step-head">1) Create an account with us.</p>
+  <p class="step-bulk">Before entering to earn our rewards, you need to create an account. All we need is the info for your Amazon account, an email, and a password. If you don't have an acount you can make one <a href="#" class="links">here.</a> Yes, we do need your email, but we'll only send you one a month, telling you whether or not you won, asking you to send us your reciepts, and reminding you to join the rewards for the next month. We won't give it to anyone else, and we definitely won't spam you, because who likes that?</p>
+  <br>
+  <p class="step-head">2) Go to our link.</p>
+  <p class="step-bulk">This step is the most important. Make sure you pay close attention. Really. (It's helpful for you, anyway.) Next you should visit the link at the end of this step. When you get there, make sure you bookmark it or can access it again. <a href="#" class="links">(Link to our page.)</a></p>
+  <br>
+  <br>
+  <p class="step-head">3) Shop! (Using our link.)</p>
+  <p class="step-bulk">Now that it's bookmarked, every time you want to shop on Amazon, do so through our link. It costs you no extra money or anything like that. It's the exact same as shopping on the Amazon home page. But, you get entered into our rewards. You can read about that in our next step.</p>
+  <br>
+  <p class="step-head">4) Join our rewards.</p>
+  <p class="step-bulk">To join the rewards all you have to do is go to <a href="/pages/rewards" class="links">this page</a> and click "Join Rewards." After that, you're set! Just wait until the end of the month, until you get our email. There you'll get a message saying either "You won!" or "You didn't win." We hope that you win, and good luck. But before you leave, we have one final step.</p>
+  <br>
+  <p class="step-head">5) Send receipts.</p>
+  <p class="step-bulk">With that end-of-the-month email comes a linkt o send your reciepts. By doing this, you increase your chances of winning. You can go from a 1% chance of winning to a 5%. Pretty good, right?</p>
+  </div>
+
+
+
+  </body>
+</html>

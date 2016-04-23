@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'pages/terms'
+  
   get 'pages/rewards'
 
   get 'pages/why'
