@@ -36,7 +36,17 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-  <div class="container">
+
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div class="alert alert-<%= name.to_s == "notice" ? "success" : "danger" %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+  <% end %>
+
+<div class="container">
     <p class="step-head" id="why">Why us?</p>
     <p class="step-bulk">There are a lot of reasons why you should use our service. For one, it doesn't cost you anything else. Basically, for $0, you could get $50! If it seems like its too good to be true, that's what we thought at first, but it's not. The way it works is using Amazon affiliate programs. Basically, we promote Amazon products, and in return, we get a cut. We take that cut and give it back to you! We like to share the love. Also, we won't send your email to anyone. That leads to spam, which no one likes. Really. Who does?</p>
   </div>
